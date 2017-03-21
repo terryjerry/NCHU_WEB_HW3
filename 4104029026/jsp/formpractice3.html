@@ -3,12 +3,24 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8";>
 		<title>3/21 表單練習</title>
 		<style>
-			<!--table {
+			table {
 				border-style:solid;
 				border-width:3px;
 				border-color:#0000FF;
 				border:2;
-			}-->
+
+
+				//background-color: SlateGray;
+				//margin-top: auto;
+				//margin-left: auto;
+				//margin-right: auto;
+				//margin-bottom: auto;
+
+				padding-top: auto;
+				padding-left: auto;
+				padding-right: auto;
+				padding-bottom: auto;
+			}
 		</style>
 		<link rel="stylesheet" href="main.css">
 	</head>
@@ -23,20 +35,19 @@
 			自傳：<textarea name="note"></textarea>
 			<input type="button" value="送出" onclick="postData()" />
 		</form>
-		
+
 		<div id="a">
 		</div>
-		
+
 		<script>
 			function postData(){
-				var output = document.getElementById("output");
 				var username = document.form1.username.value;
 				var birthday = document.form1.birthday.value;
 				var sex = document.form1.sex.value;
 				var hobby = document.form1.hobby.value;
 				var note = document.form1.note.value;
-				
-				
+
+
 				var objNode = document.getElementById("a");
 				var tableform = document.createElement("table");
 				var tr = document.createElement("tr");
@@ -55,7 +66,7 @@
 				var objTextNode4 = document.createTextNode(strText4);
 				var strText5 = "自傳";
 				var objTextNode5 = document.createTextNode(strText5);
-				
+
 				objNode.appendChild(tableform);
 				tableform.appendChild(tr);
 				tr.appendChild(th);
@@ -68,20 +79,20 @@
 				th3.appendChild(objTextNode3);
 				th4.appendChild(objTextNode4);
 				th5.appendChild(objTextNode5);
-				
+
 				var tr2 = document.createElement("tr");
 				var td = document.createElement("td");
 				var td2 = document.createElement("td");
 				var td3 = document.createElement("td");
 				var td4 = document.createElement("td");
 				var td5 = document.createElement("td");
-				
+
 				var objTextNode6 = document.createTextNode(username);
 				var objTextNode7 = document.createTextNode(birthday);
 				var objTextNode8 = document.createTextNode(sex);
 				var objTextNode9 = document.createTextNode(hobby);
 				var objTextNode10 = document.createTextNode(note);
-				
+
 				tableform.appendChild(tr2);
 				tr2.appendChild(td);
 				tr2.appendChild(td2);
@@ -93,9 +104,9 @@
 				td3.appendChild(objTextNode8);
 				td4.appendChild(objTextNode9);
 				td5.appendChild(objTextNode10);
-				
+
 				tableform.setAttribute("border","2");
-				
+
 			}
 		</script>
 		<br>
